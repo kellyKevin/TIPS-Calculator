@@ -1,0 +1,38 @@
+﻿@model YourProjectNamespace.Models.Meal
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div>
+        <h1>Tip Calculator</h1>
+        <form asp-action="Calculate" method="post">
+            <div>
+                <label for="Cost">Cost of Meal:</label>
+                <input type="text" id="Cost" asp-for="Cost" />
+            </div>
+            <div>
+                <input type="submit" value="Calculate" />
+                <a href="@(Url.Action("Index"))">Clear</a>
+            </div>
+        </form>
+        @if (ViewBag.Tip15 != null)
+        {
+            <div>
+                <p>Tip 15%: @ViewBag.Tip15</p>
+                <p>Tip 18%: @ViewBag.Tip18</p>
+                <p>Tip 20%: @ViewBag.Tip20</p>
+            </div>
+        }
+        @if (ViewBag.Error != null)
+        {
+            <div>
+                <p style="color: red;">@ViewBag.Error</p>
+            </div>
+        }
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    margin: 20px;
+}
+
+input[type="text"] {
+    width: 200px;
+    padding: 5px;
+}
+
+input[type="submit"], a {
+    margin-top: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+a {
+    display: inline-block;
+    margin-left: 10px;
+    background-color: #6c757d;
+}
+
+    a:hover, input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+div p {
+    margin-top: 10px;
+    font-weight: bold;
+}
